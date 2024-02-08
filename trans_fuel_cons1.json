@@ -1,0 +1,52 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021",
+    "summary": "Contains  sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]",
+    "description": "The entire time series is revised each year to take account of methodological improvements.",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "public_contact_point_uri": "mailto:energyefficiency.stats@energysecurity.gov.uk",
+    "themes": "https://www.ons.gov.uk/businessindustryandtrade/manufacturingandproductionindustry",
+    "publisher": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero",
+    "creator": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero",
+    "dataset_issued": "2023-09-28T00:00:00Z",
+    "dataset_modified": "2023-09-28T00:00:00Z",
+    "keywords": [
+        "fuels",
+        "allFuels",
+        "coal",
+        "biowaste",
+        "petroleum",
+        "rail",
+        "domestic",
+        "industry" 
+    ], 
+    "columns": {
+        "area_code": {
+            "from_template": "statistical-geography"
+          },
+        "region": {
+            "type": "dimension",
+            "label": "Region"
+        },
+        "local_authority": {
+            "type": "dimension",
+            "label": "Local Authority",
+            "description": "The local authorities shown in these tables are based on local authority boundaries as at 1 April 2022."
+        },
+        "measure": {
+            "type": "measures"
+        },
+        "unit": {
+            "type": "units",
+            "values": true
+        },
+        "region": {
+            "type": "dimension",
+            "label": "Region"
+        },
+        "value": {
+            "type": "observations",
+            "data_type": "decimal"
+        }
+    }
+}
