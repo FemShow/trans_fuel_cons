@@ -40,9 +40,9 @@
             "type": "units",
             "values": true
         },
-        "region": {
+        "variable": {
             "type": "dimension",
-            "label": "Region"
+            "label": "variable"
         },
         "value": {
             "type": "observations",
