@@ -1,0 +1,137 @@
+{
+  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "title": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021",
+  "summary": "Contains sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]",
+  "description": "The entire time series is revised each year to take account of methodological improvements.",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "public_contact_point_uri": "mailto:energyefficiency.stats@energysecurity.gov.uk",
+  "themes": "https://www.ons.gov.uk/businessindustryandtrade/manufacturingandproductionindustry",
+  "publisher": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero",
+  "creator": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero",
+  "dataset_issued": "2023-09-28T09:30:00Z",
+  "dataset_modified": "2023-09-28T09:30:00Z",
+  "keywords": [
+    "fuels",
+    "allFuels",
+    "coal",
+    "biowaste",
+    "petroleum",
+    "rail",
+    "domestic",
+    "industry"  
+  ],
+  "columns": {
+    "year": {
+      "from_template": "year"
+    },
+    "area_code": {
+      "from_template": "statistical-geography"
+    },
+    "area_label": {
+      "type": "dimension",
+      "label": "Local Authority",
+      "description": "The local authorities shown in these tables are based on local authority boundaries as at 1 April 2022."
+    },
+    "all_fuels": {
+        "type": "observations",
+        "data_type": "decimal"
+    },
+        "concepts": [
+          {
+            "label": "fuel_varieties",
+            "description": "Fuel fuel_varietiesnew-codelist-config",
+            "notation": "fuel_varieties",
+            "sort_order": 0,
+            "children": [
+              {
+                "label": "ind_pet",
+                "description": "Industrial petroleum.",
+                "notation": "ind-pet"
+              },
+              {
+                "label": "dom_pet",
+                "description": "Domestic petroleum.",
+                "notation": "dom_pet"
+              },
+              {
+                "label": "rail_pet",
+                "description": "Rail petroleum.",
+                "notation": "rail-pet"
+              },
+              {
+                "label": "pub_adm_pet",
+                "description": "Public administration petroleum.",
+                "notation": "pub_adm_pet"
+              },
+              {
+                "label": "comm_pet",
+                "description": "Commercial petroleum.",
+                "notation": "comm_pet"
+              },
+              {
+                "label": "agric_pet",
+                "description": "Agricultural petroleum, excluding the consumption of propane",
+                "notation": "agric-pet"
+              },
+              {
+                "label": "ind_coal",
+                "description": "Industrial coal includes some coal consumption by auto-generators",
+                "notation": "ind_coal"
+              },
+              {
+                "label": "dom_coal",
+                "description": "Domestic coal",
+                "notation": "dom_coal"
+              },
+              {
+                "label": "rail_coal",
+                "description": "Rail coal",
+                "notation": "rail_coal"
+              },
+              {
+                "label": "pub_adm_coal",
+                "description": "Public administration coal",
+                "notation": "pub_adm_coal"
+              },
+              {
+                "label": "comm_coal",
+                "description": "Commercial coal",
+                "notation": "comm_coal"
+              },
+              {
+                "label": "agric_coal",
+                "description": "Agricultural coal",
+                "notation": "agric_coal"
+              },
+              {
+                "label": "ind_man_sol_fuel",
+                "description": "Industrial manufactured solid fuels",
+                "notation": "ind_man_sol_fuel"
+              },
+              {
+                "label": "dom_man_sol_fuel",
+                "description": "Domestic manufactured solid fuels",
+                "notation": "dom_man_sol_fuel"
+              },
+              {
+                "label": "ind_bio_and_waste",
+                "description": "Industrial bioenergy & wastes, all figures exclude bioenergy and wastes used for electricity generation",
+                "notation": "ind_bio_and_waste"
+              },
+              {
+                "label": "dom_bio_and_waste",
+                "description": "Domestic bioenergy & wastes, all figures exclude bioenergy and wastes used for electricity generation",
+                "notation": "dom_bio_and_waste"
+              }
+            ]
+          }
+        ],
+        "measure": {
+          "type": "measures"
+        },
+        "unit": {
+          "type": "units",
+          "values": true
+        }
+      }
+    }
