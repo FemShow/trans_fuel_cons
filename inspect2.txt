@@ -1,0 +1,85 @@
+
+- This file is a data cube.
+
+
+        - The data cube has the following catalog metadata:
+          - Title: Sub-national estimates of non-gas, non-electricity, and non-road transport fuel consumption in 2021
+          - Label: Sub-national estimates of non-gas, non-electricity, and non-road transport fuel consumption in 2021
+          - Issued: 2023-09-28T09:30:00+00:00
+          - Modified: 2023-09-28T09:30:00+00:00
+          - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - Creator: https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero
+          - Publisher: https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero
+          - Landing Pages: None
+          - Themes: 
+		-- https://www.ons.gov.uk/businessindustryandtrade/manufacturingandproductionindustry
+          - Keywords: 
+		-- industry
+		-- petroleum
+		-- domestic
+		-- biowaste
+		-- allFuels
+		-- fuels
+		-- rail
+		-- coal
+          - Contact Point: None
+          - Identifier: Sub-national estimates of non-gas, non-electricity, and non-road transport fuel consumption in 2021
+          - Comment: Contains sub-national percentage estimates of non-gas, non-electricity, and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]
+          - Description: The entire time series is revised each year to take account of methodological improvements.
+        
+
+ - The data cube has the following column component information: 
+    - Dataset Label: Sub-national estimates of non-gas, non-electricity, and non-road transport fuel consumption in 2021
+    - Columns: 
+             Title         Type  Required                                                                                                                          Property URL Observations Column Titles
+              year    Dimension      True                  sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/year                           
+         area_code    Dimension      True sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/statistical-geography                           
+        area_label    Dimension      True       sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/local-authority                           
+    fuel_varieties    Dimension      True        sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/fuel-varieties                           
+         all_fuels Observations      True              sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/{+measure}                           
+           measure     Measures      True                                                                                          http://purl.org/linked-data/cube#measureType                           
+              unit        Units      True                                                                           http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                           
+    - Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 3
+        - Code Lists:
+                    Code List Code List Label Columns Used In
+ fuel-varieties.csv#code-list  Fuel Varieties  fuel_varieties
+local-authority.csv#code-list Local Authority      area_label
+           year.csv#code-list            Year            year
+
+- The data cube has the following dataset information:
+        - Number of Observations: 6681
+        - Number of Duplicates: 0
+        - First 10 Observations: 
+ year area_code      area_label fuel_varieties  all_fuels                                                                                   measure                              unit
+ 2021 W06000019   blaenau-gwent  ind_petroleum        4.4 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000013        bridgend  ind_petroleum       10.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000018      caerphilly  ind_petroleum       14.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000015         cardiff  ind_petroleum       15.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000010 carmarthenshire  ind_petroleum       13.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000008      ceredigion  ind_petroleum        6.9 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000003           conwy  ind_petroleum        5.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000004    denbighshire  ind_petroleum       11.3 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000005      flintshire  ind_petroleum       34.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W06000002         gwynedd  ind_petroleum       14.7 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+        - Last 10 Observations: 
+ year area_code             area_label fuel_varieties  all_fuels                                                                                   measure                              unit
+ 2021 N09000008    mid-and-east-antrim      all_fuels      198.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 N09000009             mid-ulster      all_fuels      249.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 N09000010  newry-mourne-and-down      all_fuels      198.6 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 N92000002 northern-ireland-total      all_fuels     2406.0 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 K03000001    great-britain-total      all_fuels    18494.5 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 W92000004                  wales      all_fuels     2336.3 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 S92000003               scotland      all_fuels     2716.9 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 E92000001                england      all_fuels    13441.3 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 N92000002       northern-ireland      all_fuels     2406.0 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+ 2021 K02000001   united-kingdom-total      all_fuels    20900.5 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+                                                                                  Measure                              Unit  Count
+sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent   6681
+        
