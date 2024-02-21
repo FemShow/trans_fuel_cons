@@ -21,32 +21,32 @@
         "industry" 
     ], 
     "columns": {
-        "area_code": {
-            "from_template": "statistical-geography"
-          },
-        "region": {
-            "type": "dimension",
-            "label": "Region"
+        "period": {
+            "type": "dimension"
         },
-        "local_authority": {
-            "type": "dimension",
-            "label": "Local Authority",
-            "description": "The local authorities shown in these tables are based on local authority boundaries as at 1 April 2022."
+        "period_type": {
+            "type": "dimension"
+        },
+        "period_label": {
+            "type": "dimension"
+        },
+        "area_code": {
+            "type": "dimension"
+        },
+        "area_label": {
+            "type": "dimension"
         },
         "measure": {
             "type": "measures"
         },
-        "unit": {
-            "type": "units",
-            "values": true
+        "unit":{
+            "type": "units"
         },
-        "variable": {
-            "type": "dimension",
-            "label": "variable"
+        "fuel_type": {
+            "type": "dimension"
         },
         "value": {
-            "type": "observations",
-            "data_type": "decimal"
+            "type": "observations"
         }
     }
 }
