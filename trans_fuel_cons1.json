@@ -21,13 +21,13 @@
         "industry" 
     ], 
     "columns": {
-        "period": {
+        "time_period": {
             "type": "dimension"
         },
-        "period_type": {
+        "time_period_type": {
             "type": "dimension"
         },
-        "period_label": {
+        "time_period_label": {
             "type": "dimension"
         },
         "area_code": {
@@ -35,6 +35,9 @@
         },
         "area_label": {
             "type": "dimension"
+        },
+        "observation": {
+            "type": "observations"
         },
         "measure": {
             "type": "measures"
@@ -44,9 +47,6 @@
         },
         "fuel_type": {
             "type": "dimension"
-        },
-        "value": {
-            "type": "observations"
         }
     }
 }
