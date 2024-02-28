@@ -1,0 +1,45 @@
+
+- This file is a code list.
+
+
+        - The code list has the following catalog metadata:
+          - Title: Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021
+          - Label: Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021
+          - Issued: 2023-09-28T00:00:00
+          - Modified: 2023-09-28T00:00:00
+          - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - Creator: https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero
+          - Publisher: https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero
+          - Landing Pages: None
+          - Themes: 
+		-- https://www.ons.gov.uk/businessindustryandtrade/manufacturingandproductionindustry
+          - Keywords: 
+		-- industry
+		-- rail
+		-- biowaste
+		-- allFuels
+		-- petroleum
+		-- coal
+		-- domestic
+		-- fuels
+          - Contact Point: None
+          - Identifier: Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021
+          - Comment: Contains  sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]
+          - Description: The entire time series is revised each year to take account of methodological improvements.
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 0
+        - Number of Duplicates: 0
+        - Concepts: 
+Empty DataFrame
+Columns: [Uri Identifier, Label, Notation, Parent Uri Identifier, Sort Priority, Description]
+Index: []
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 0
+        - Concepts hierarchy:
+root
+
+        
