@@ -18,23 +18,115 @@
         "petroleum",
         "rail",
         "domestic",
-        "industry" 
-    ], 
+        "industry"
+    ],
     "columns": {
+        "time_period_type": false,
         "time_period": {
-            "type": "dimension"
+            "from_template": "year"
         },
-        "time_period_type": {
-            "type": "dimension"
-        },
-        "time_period_label": {
-            "type": "dimension"
-        },
+        "time_period_label": false,
         "area_code": {
-            "type": "dimension"
+            "from_template": "statistical-geography"
         },
-        "area_label": {
-            "type": "dimension"
+        "area_label": false,
+        "fuel_type": {
+            "type": "dimension",
+            "code_list": {
+                "title": "fuel_type",
+                "summary": "All fuel varieties.",
+                "license": "https://creativecommons.org/licenses/by/4.0/",
+                "concepts": [
+                    {
+                        "label": "all_fuels",
+                        "description": "All fuels",
+                        "notation": "all_fuels",
+                        "sort_order": 0,
+                        "children": [
+                            {
+                                "label": "ind_pet",
+                                "description": "Industrial petroleum.",
+                                "notation": "ind-pet"
+                            },
+                            {
+                                "label": "dom_pet",
+                                "description": "Domestic petroleum.",
+                                "notation": "dom_pet"
+                            },
+                            {
+                                "label": "rail_pet",
+                                "description": "Rail petroleum.",
+                                "notation": "rail-pet"
+                            },
+                            {
+                                "label": "pub_adm_pet",
+                                "description": "Public administration petroleum.",
+                                "notation": "pub_adm_pet"
+                            },
+                            {
+                                "label": "comm_pet",
+                                "description": "Commercial petroleum.",
+                                "notation": "comm_pet"
+                            },
+                            {
+                                "label": "agric_pet",
+                                "description": "Agricultural petroleum, excluding the consumption of propane",
+                                "notation": "agric-pet"
+                            },
+                            {
+                                "label": "ind_coal",
+                                "description": "Industrial coal includes some coal consumption by auto-generators",
+                                "notation": "ind_coal"
+                            },
+                            {
+                                "label": "dom_coal",
+                                "description": "Domestic coal",
+                                "notation": "dom_coal"
+                            },
+                            {
+                                "label": "rail_coal",
+                                "description": "Rail coal",
+                                "notation": "rail_coal"
+                            },
+                            {
+                                "label": "pub_adm_coal",
+                                "description": "Public administration coal",
+                                "notation": "pub_adm_coal"
+                            },
+                            {
+                                "label": "comm_coal",
+                                "description": "Commercial coal",
+                                "notation": "comm_coal"
+                            },
+                            {
+                                "label": "agric_coal",
+                                "description": "Agricultural coal",
+                                "notation": "agric_coal"
+                            },
+                            {
+                                "label": "ind_man_sol_fuel",
+                                "description": "Industrial manufactured solid fuels",
+                                "notation": "ind_man_sol_fuel"
+                            },
+                            {
+                                "label": "dom_man_sol_fuel",
+                                "description": "Domestic manufactured solid fuels",
+                                "notation": "dom_man_sol_fuel"
+                            },
+                            {
+                                "label": "ind_bio_and_waste",
+                                "description": "Industrial bioenergy & wastes, all figures exclude bioenergy and wastes used for electricity generation",
+                                "notation": "ind_bio_and_waste"
+                            },
+                            {
+                                "label": "dom_bio_and_waste",
+                                "description": "Domestic bioenergy & wastes, all figures exclude bioenergy and wastes used for electricity generation",
+                                "notation": "dom_bio_and_waste"
+                            }
+                        ]
+                    }
+                ]
+            }
         },
         "observation": {
             "type": "observations"
@@ -42,11 +134,8 @@
         "measure": {
             "type": "measures"
         },
-        "unit":{
+        "unit": {
             "type": "units"
-        },
-        "fuel_type": {
-            "type": "dimension"
         }
     }
 }
