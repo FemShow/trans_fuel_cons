@@ -1,5 +1,5 @@
 {
-  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "$schema": "https://purl.org/csv-cubed/code-list-config/v2",
   "title": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021",
   "summary": "Contains sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]",
   "description": "The entire time series is revised each year to take account of methodological improvements.",
@@ -18,29 +18,17 @@
     "petroleum",
     "rail",
     "domestic",
-    "industry"  
+    "industry"
   ],
   "columns": {
-    "year": {
-      "from_template": "year"
-    },
-    "area_code": {
-      "from_template": "statistical-geography"
-    },
-    "area_label": {
+    "fuel_varieties": {
       "type": "dimension",
-      "label": "Local Authority",
-      "description": "The local authorities shown in these tables are based on local authority boundaries as at 1 April 2022."
-    },
-    "all_fuels": {
-        "type": "observations",
-        "data_type": "decimal"
-    },
+      "code_list": {
         "concepts": [
           {
-            "label": "fuel_varieties",
-            "description": "Fuel fuel_varietiesnew-codelist-config",
-            "notation": "fuel_varieties",
+            "label": "all_fuels",
+            "description": "All fuels",
+            "notation": "all_fuels",
             "sort_order": 0,
             "children": [
               {
@@ -135,3 +123,5 @@
         }
       }
     }
+  }
+}
