@@ -1,8 +1,8 @@
 
-- This file is a code list.
+- This file is a data cube.
 
 
-        - The code list has the following catalog metadata:
+        - The data cube has the following catalog metadata:
           - Title: Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021
           - Label: Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021
           - Issued: 2023-09-28T00:00:00
@@ -14,32 +14,76 @@
           - Themes: 
 		-- https://www.ons.gov.uk/businessindustryandtrade/manufacturingandproductionindustry
           - Keywords: 
-		-- industry
 		-- rail
 		-- biowaste
-		-- allFuels
-		-- petroleum
-		-- coal
+		-- industry
 		-- domestic
+		-- petroleum
+		-- allFuels
 		-- fuels
+		-- coal
           - Contact Point: None
           - Identifier: Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021
           - Comment: Contains  sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]
           - Description: The entire time series is revised each year to take account of methodological improvements.
         
 
-- The code list has the following dataset information:
-        - Number of Concepts: 0
+ - The data cube has the following column component information: 
+    - Dataset Label: Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021
+    - Columns: 
+                Title         Type  Required                                                                                                                          Property URL Observations Column Titles
+     time_period_type   Suppressed     False                                                                                                                                  None                           
+          time_period    Dimension      True                  sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/year                           
+    time_period_label   Suppressed     False                                                                                                                                  None                           
+            area_code    Dimension      True sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/statistical-geography                           
+           area_label   Suppressed     False                                                                                                                                  None                           
+            fuel_type    Dimension      True             sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/fuel_type                           
+          observation Observations      True              sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/{+measure}                           
+              measure     Measures      True                                                                                          http://purl.org/linked-data/cube#measureType                           
+                 unit        Units      True                                                                           http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                           
+    - Columns where suppress output is true: 
+    		-- time_period_type
+    		-- time_period_label
+    		-- area_label
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 2
+        - Code Lists:
+              Code List Code List Label Columns Used In
+fuel_type.csv#code-list       fuel_type       fuel_type
+     year.csv#code-list            Year     time_period
+
+- The data cube has the following dataset information:
+        - Number of Observations: 6681
         - Number of Duplicates: 0
-        - Concepts: 
-Empty DataFrame
-Columns: [Uri Identifier, Label, Notation, Parent Uri Identifier, Sort Priority, Description]
-Index: []
+        - First 10 Observations: 
+time_period_type  time_period  time_period_label area_code      area_label fuel_type  observation                                                                                   measure                              unit
+            Year         2021               2021 W06000019   Blaenau Gwent   ind-pet          4.4 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000013        Bridgend   ind-pet         10.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000018      Caerphilly   ind-pet         14.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000015         Cardiff   ind-pet         15.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000010 Carmarthenshire   ind-pet         13.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000008      Ceredigion   ind-pet          6.9 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000003           Conwy   ind-pet          5.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000004    Denbighshire   ind-pet         11.3 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000005      Flintshire   ind-pet         34.1 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W06000002         Gwynedd   ind-pet         14.7 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+        - Last 10 Observations: 
+time_period_type  time_period  time_period_label area_code             area_label fuel_type  observation                                                                                   measure                              unit
+            Year         2021               2021 N09000008    Mid and East Antrim all_fuels        198.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 N09000009             Mid Ulster all_fuels        249.2 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 N09000010 Newry, Mourne and Down all_fuels        198.6 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 N92000002 Northern Ireland total all_fuels       2406.0 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 K03000001    Great Britain total all_fuels      18494.5 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 W92000004                  Wales all_fuels       2336.3 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 S92000003               Scotland all_fuels       2716.9 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 E92000001                England all_fuels      13441.3 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 N92000002       Northern Ireland all_fuels       2406.0 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
+            Year         2021               2021 K02000001   United Kingdom total all_fuels      20900.5 sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent
         
 
-- The code list has the following concepts information:
-        - Concepts hierarchy depth: 0
-        - Concepts hierarchy:
-root
-
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+                                                                                  Measure                              Unit  Count
+sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption thousand-tonnes-of-oil-equivalent   6681
         

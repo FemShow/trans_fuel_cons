@@ -1,5 +1,5 @@
 {
-    "$schema": "https://purl.org/csv-cubed/code-list-config/v2",
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
     "title": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021",
     "summary": "Contains  sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]",
     "description": "The entire time series is revised each year to take account of methodological improvements.",
