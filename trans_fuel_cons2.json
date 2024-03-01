@@ -35,7 +35,7 @@
             "code_list": {
                 "title": "fuel_type",
                 "summary": "All fuel varieties.",
-                "license": "https://creativecommons.org/licenses/by/4.0/",
+                "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
                 "concepts": [
                     {
                         "label": "all_fuels",
