@@ -45,27 +45,27 @@
                         "children": [
                             {
                                 "label": "ind_pet",
-                                "description": "Industrial petroleum.",
+                                "description": "Industrial petroleum",
                                 "notation": "ind-pet"
                             },
                             {
                                 "label": "dom_pet",
-                                "description": "Domestic petroleum.",
+                                "description": "Domestic petroleum",
                                 "notation": "dom_pet"
                             },
                             {
                                 "label": "rail_pet",
-                                "description": "Rail petroleum.",
+                                "description": "Rail petroleum",
                                 "notation": "rail-pet"
                             },
                             {
                                 "label": "pub_adm_pet",
-                                "description": "Public administration petroleum.",
+                                "description": "Public administration petroleum",
                                 "notation": "pub_adm_pet"
                             },
                             {
                                 "label": "comm_pet",
-                                "description": "Commercial petroleum.",
+                                "description": "Commercial petroleum",
                                 "notation": "comm_pet"
                             },
                             {
