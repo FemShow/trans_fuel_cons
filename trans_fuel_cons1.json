@@ -1,7 +1,7 @@
 {
     "$schema": "https://purl.org/csv-cubed/qube-config/v1",
     "title": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021",
-    "summary": "Contains  sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe)) [Note 1]",
+    "summary": "Contains  sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe))",
     "description": "The entire time series is revised each year to take account of methodological improvements.",
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "public_contact_point_uri": "mailto:energyefficiency.stats@energysecurity.gov.uk",
@@ -12,13 +12,9 @@
     "dataset_modified": "2023-09-28T00:00:00Z",
     "keywords": [
         "fuels",
-        "allFuels",
         "coal",
         "biowaste",
-        "petroleum",
-        "rail",
-        "domestic",
-        "industry"
+        "petroleum"
     ],
     "columns": {
         "time_period_type": false,
@@ -32,7 +28,7 @@
         "area_label": false,
         "fuel_type": {
           "type": "dimension",
-          "code_list": "./trans_fuel_codelist_config.json"
+          "code_list": "./trans_fuel_cons2.json"
         },
         "observation": {
             "type": "observations"
