@@ -1,0 +1,114 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "non-gas-non-electricity-and-non-road-transport-fuels.csv#code-list",
+    "url": "non-gas-non-electricity-and-non-road-transport-fuels.csv",
+    "tableSchema": "non-gas-non-electricity-and-non-road-transport-fuels.table.json",
+    "rdfs:seeAlso": [
+        {
+            "@id": "non-gas-non-electricity-and-non-road-transport-fuels.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "non-gas-non-electricity-and-non-road-transport-fuels.csv#code-list",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Entity",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/ns/dcat#Dataset"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "Non-gas, non-electricity and non-road transport fuels"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Non-gas, non-electricity and non-road transport fuels"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-28T00:00:00"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-28T00:00:00"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Non-gas, non-electricity and non-road transport fuels"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Aligns the code list's label to the code used in the dataset"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Non-gas, non-electricity and non-road transport fuels"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "coal"
+                },
+                {
+                    "@language": "en",
+                    "@value": "biowaste"
+                },
+                {
+                    "@language": "en",
+                    "@value": "fuels"
+                },
+                {
+                    "@language": "en",
+                    "@value": "petroleum"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#theme": [
+                {
+                    "@id": "https://www.ons.gov.uk/businessindustryandtrade/manufacturingandproductionindustry"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "non-gas-non-electricity-and-non-road-transport-fuels.csv#csvcubed-build-activity"
+                }
+            ]
+        }
+    ]
+}

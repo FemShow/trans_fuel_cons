@@ -1,0 +1,591 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dataset",
+    "tables": [
+        {
+            "url": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "time_period_type",
+                        "name": "time_period_type",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "time_period",
+                        "name": "time_period",
+                        "propertyUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/year",
+                        "valueUrl": "year.csv#{+time_period}",
+                        "required": true
+                    },
+                    {
+                        "titles": "time_period_label",
+                        "name": "time_period_label",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "area_code",
+                        "name": "area_code",
+                        "propertyUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+area_code}",
+                        "required": true
+                    },
+                    {
+                        "titles": "area_label",
+                        "name": "area_label",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "fuel_type",
+                        "name": "fuel_type",
+                        "propertyUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/fuel_type",
+                        "valueUrl": "non-gas-non-electricity-and-non-road-transport-fuels.csv#{+fuel_type}",
+                        "required": true
+                    },
+                    {
+                        "titles": "observation",
+                        "name": "observation",
+                        "propertyUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/{+measure}",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "measure",
+                        "name": "measure",
+                        "propertyUrl": "http://purl.org/linked-data/cube#measureType",
+                        "valueUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/{+measure}",
+                        "required": true
+                    },
+                    {
+                        "titles": "unit",
+                        "name": "unit",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#unit/{+unit}",
+                        "required": true
+                    },
+                    {
+                        "name": "virt_type",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://purl.org/linked-data/cube#Observation"
+                    },
+                    {
+                        "name": "virt_dataset",
+                        "virtual": true,
+                        "propertyUrl": "http://purl.org/linked-data/cube#dataSet",
+                        "valueUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "time_period",
+                        "reference": {
+                            "resource": "year.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "fuel_type",
+                        "reference": {
+                            "resource": "non-gas-non-electricity-and-non-road-transport-fuels.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "time_period",
+                    "area_code",
+                    "fuel_type",
+                    "measure"
+                ],
+                "aboutUrl": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#obs/{time_period},{area_code},{fuel_type}@{measure}"
+            }
+        },
+        {
+            "url": "year.csv",
+            "tableSchema": "year.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "non-gas-non-electricity-and-non-road-transport-fuels.csv",
+            "tableSchema": "non-gas-non-electricity-and-non-road-transport-fuels.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#class/year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/statistical-geography",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#class/fuel_type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#structure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/measure-type"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/fuel_type"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/year"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/unit"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#measure/sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/statistical-geography"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/year"
+                },
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/fuel_type"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/measure-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/fuel_type",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "non-gas-non-electricity-and-non-road-transport-fuels.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "fuel_type"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#class/fuel_type"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/unit",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dataset",
+            "@type": [
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/ns/dcat#Dataset"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "The entire time series is revised each year to take account of methodological improvements."
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-28T00:00:00"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-28T00:00:00"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Contains  sub-national percentage estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021 (in thousand tonnes of oil equivalent (ktoe))"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Sub-national estimates of non-gas, non-electricity and non-road transport fuel consumption in 2021"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "coal"
+                },
+                {
+                    "@language": "en",
+                    "@value": "biowaste"
+                },
+                {
+                    "@language": "en",
+                    "@value": "fuels"
+                },
+                {
+                    "@language": "en",
+                    "@value": "petroleum"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#theme": [
+                {
+                    "@id": "https://www.ons.gov.uk/businessindustryandtrade/manufacturingandproductionindustry"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Statistical Geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#class/statistical-geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refArea"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#class/statistical-geography",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#component/fuel_type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/fuel_type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/fuel_type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dimension/year",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "year.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#class/year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dependency/year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./year.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "year.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#dependency/non-gas-non-electricity-and-non-road-transport-fuels",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./non-gas-non-electricity-and-non-road-transport-fuels.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "non-gas-non-electricity-and-non-road-transport-fuels.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "sub-national-estimates-of-non-gas-non-electricity-and-non-road-transport-fuel-consumption-in-2021.csv#unit/thousand-tonnes-of-oil-equivalent",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "thousand tonnes of oil equivalent"
+                }
+            ]
+        }
+    ]
+}
