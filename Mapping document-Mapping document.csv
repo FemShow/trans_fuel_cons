@@ -1,0 +1,12 @@
+Extraction,Transformation,Load (columns to be created and populated),,
+Column a (time_period),Convert to gregorian-interval expressed in ISO-8601 format time intervals using Start Date+Length of time,time_period (2001-06-01/P92D),,
+Workbook name (see enclosed data dictionary),Convert to ONS geography code (use the enclosed data dictionary),Value in ons_geography_code as ons_code,,
+,,,,
+Columns b to s contain values for all_age categories,Pivot columns b through s to create rows of age_categories,age_categories,,
+"Depending on the worksheet name suffix _p, _m or _w","Depending on the worksheet name suffix (_p, _m, or _w), adjust the sex column accordingly. For example:
+If the worksheet name ends with _p, set the sex column options to (_T, M, F).
+If the worksheet name ends with _m, set the sex column options to (M).
+If the worksheet name ends with _w, set the sex column options to (F)",Insert relevant value into the sex column,,
+observation,all values in columns b t through s should constitute the observation.,all values in columns b t through s should constitute the observation column.,,
+"measure,unit",Values in column b through j are measured in thousands. all values from column k through s are percentages. ,thousands/percentage into the observation column,,
+unit,set up to list the units of the values of columns b through j with value ‘integer’. And to list the units of columns k through as ‘percent’.,integer/percent into the unit column,,
