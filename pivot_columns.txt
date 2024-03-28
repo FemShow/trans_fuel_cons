@@ -1,0 +1,39 @@
+﻿
+This comprehensive data preprocessing workflow performs the following tasks:
+    1. Reads an Excel file containing multiple worksheets.
+    2. Processes each worksheet according to specific rules, such as renaming columns, adding new columns, and formatting data.
+    3. Merges the processed data from all worksheets into a single DataFrame.
+    4. Melts the DataFrame to create a long format suitable for analysis.
+    5. Adds additional columns ('measures' and 'units') based on the suffix of the 'age_band' column.
+    6. Processes the 'age_band' and 'observations' columns to standardize their values and formats.
+    7. Saves the processed data to a CSV file for further analysis.
+Data Acquisition:
+        ◦ Read the Excel file containing the regional employment data by age.
+        ◦ Identify the names of all worksheets within the Excel file.
+    2. Worksheet Processing:
+        ◦ For each worksheet:
+            ▪ Exclude any sheets designated for summary, notes, index, or other non-data purposes.
+            ▪ Extract relevant information:
+                • Strip the last two characters of the worksheet name to determine the region.
+                • Extract suffix from the worksheet name to determine the sex category.
+                • Read the data into a pandas DataFrame, skipping irrelevant rows and specifying column headers.
+                • Add columns for 'ons_geography_code' and 'sex' based on the extracted region and sex category.
+                • Add a column for 'region' with the appropriate value derived from the worksheet name.
+                • Rename the first column to 'time_period' and format the time period.
+                • Append the processed DataFrame to a list for concatenation later.
+    3. Data Concatenation:
+        ◦ Concatenate all DataFrames obtained from the previous step into a single DataFrame.
+    4. Column Renaming:
+        ◦ Rename columns based on a predefined dictionary mapping original column names to standardized names.(This renaming these columns is to create an opportunity to differentiate between numbers (_num) and percentages (_perc))
+    5. Data Transformation:
+        ◦ Melt the DataFrame to convert wide format to long format, facilitating further analysis.
+        ◦ Add a 'measures' column based on the suffix of the 'age_band' column.
+        ◦ Add a 'units' column based on the suffix of the 'age_band' column.
+    6. Data Cleaning:
+        ◦ Iterate through the DataFrame to process 'age_band' and 'observations':
+            ▪ Remove suffixes '_num' and '_perc' from the 'age_band' column values.
+            ▪ Round 'observations' to two decimal places if it's a float value.
+            ▪ Replace '*' with 0 in 'observations' column.
+    7. Data Export:
+        ◦ Save the preprocessed data to a CSV file for further analysis.
+This workflow ensures that the data from multiple worksheets are standardized and consolidated into a cohesive dataset, ready for analysis or further processing.
